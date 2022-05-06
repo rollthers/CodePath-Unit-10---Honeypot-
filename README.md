@@ -14,13 +14,18 @@ Once I set up the GCP server, I moved towards integrating the MHN VM. To start t
 
 ![image](https://user-images.githubusercontent.com/95894083/167202372-d599f8f6-fbbc-4174-9a96-afc0897f1332.png)
 
-
+After setting this firewall up, I took to downloading and patching the required script for MHN, via cloning `https://github.com/pwnlandia/mhn.git` in my admin VM.
 
 ### Dionaea Honeypot Deployment (Required)
 
-**Summary:** Briefly in your own words, what does dionaea do?
+Dionaea is a honeypot that uses python script and libemu to detect shell-codes and scans of a server. When a scan is conducted on the honeypot, the Src IP, time, country (at least where they have set their contry to be), and port attacked are recorded. Additonally, a protocol is displayed for each scan. To deploy the honeypot, I inserted the deploy command into the MHN VM to create a sensor that utilized the script. 
 
-<img src="dionaea-honeypot.gif">
+
+![DionaeaIntegrate](https://user-images.githubusercontent.com/95894083/167226325-11b91b19-af8b-4d0f-805d-5213ecd6b799.gif)
+
+Unfortunately, due to already running this honeypot, I was not able to show it being created. If all goes well, the sensor should now be visible under the "sensors" tab in our MHN Server website. Using our IP to access the the website, the finish product looks like the following. 
+
+![image](https://user-images.githubusercontent.com/95894083/167228095-72fd7c79-b747-4db8-8590-048cdc788374.png)
 
 ### Database Backup (Required) 
 
