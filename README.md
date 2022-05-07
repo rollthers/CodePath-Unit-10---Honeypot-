@@ -29,10 +29,9 @@ Unfortunately, due to already running this honeypot, I was not able to show it b
 
 ### Database Backup (Required) 
 
-**Summary:** What is the RDBMS that MHN-Admin uses? What information does the exported JSON file record?
+To be able to export our results as a downloadable .json file, I utilized mongo export in the admin VM, and packed the size to less than five megabytes to avoid uploading issues. The command to export our results is shown below. 
 
-*Be sure to upload session.json directly to this GitHub repo/branch in order to get full credit.*
-
+![mongoexport](https://user-images.githubusercontent.com/95894083/167230204-ec22f1ed-65ad-426e-b838-93c0be2fb84a.gif)
 
 ## Notes
 
